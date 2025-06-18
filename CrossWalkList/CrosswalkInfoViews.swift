@@ -105,7 +105,9 @@ struct CrossWalkInfoOutlineGroup: View {
                 List(info, children: \.childNodes) {
                     element in
                     if let description = element.description {
-                        NavigationLink(destination: Text(description)) {
+                        NavigationLink {
+                            Text(description)
+                        } label: {
                             Text("\(element.name)")
                         }
                     } else {

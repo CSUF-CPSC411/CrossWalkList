@@ -15,7 +15,7 @@ struct ContentView: View {
     @AppStorage("sizeMultiplier") var sizeMultiplier = 1.0
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 HStack {
                 Text("Crosswalk Submission")
@@ -25,7 +25,9 @@ struct ContentView: View {
                 .padding(.bottom, 30)
                 HStack {
                     Spacer()
-                    NavigationLink(destination: Settings()) {
+                    NavigationLink {
+                        Settings()
+                    } label: {
                         Text("⚙️ Settings")
                     }
                 }
@@ -61,7 +63,9 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     // TODO: Replace destination to other CrosswalkInfo variations
-                    NavigationLink(destination: CrossWalkInfo()) {
+                    NavigationLink {
+                        CrossWalkInfo()
+                    } label: {
                         Text("ℹ️ Information about crosswalks")
                     }
                     Spacer()

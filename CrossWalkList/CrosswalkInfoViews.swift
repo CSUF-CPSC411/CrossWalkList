@@ -37,25 +37,37 @@ struct CrossWalkInfoWithLinks: View {
             VStack {
                 List {
                     Section(header: Text("Crosswalk")) {
-                        NavigationLink(destination: Text("Name of the crosswalk")) {
+                        NavigationLink {
+                            Text("Name of the crosswalk")
+                        } label: {
                             Text("Crosswalk name")
                         }
-                        NavigationLink(destination: Text("Address of the crosswalk")) {
+                        NavigationLink {
+                            Text("Address of the crosswalk")
+                        } label: {
                             Text("Crosswalk address")
                         }
                     }
                     Section(header: Text("Volunteer")) {
-                        NavigationLink(destination: Text("Name of the volunteer")) {
+                        NavigationLink {
+                            Text("Name of the volunteer")
+                        } label: {
                             Text("Volunteer")
                         }
                         DisclosureGroup(content: {
-                            NavigationLink(destination: Text("Minors can only volunteer for 1 hour and accompanied by an adult.")) {
+                            NavigationLink {
+                                Text("Minors can only volunteer for 1 hour and accompanied by an adult.")
+                            } label: {
                                 Text("Minors")
                             }
-                            NavigationLink(destination: Text("Adults can volunteer for a maximum of 3 hours.")) {
+                            NavigationLink {
+                                Text("Adults can volunteer for a maximum of 3 hours.")
+                            } label: {
                                 Text("Adults")
                             }
-                            NavigationLink(destination: Text("Seniors can volunteer for a maximum of 2 hours.")) {
+                            NavigationLink {
+                                Text("Seniors can volunteer for a maximum of 2 hours.")
+                            } label: {
                                 Text("Seniors")
                             }
                         }) {

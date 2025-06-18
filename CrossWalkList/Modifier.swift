@@ -12,7 +12,9 @@ struct TextEntry: ViewModifier {
         content
             .padding(2)
             .border(Color.black)
+            .scrollContentBackground(.hidden)
             .background(Color.white)
+            .foregroundStyle(.black)
     }
 }
 
